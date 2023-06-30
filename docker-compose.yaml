@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  kafka:
+    image: spotify/kafka
+    ports:
+      - "9092:9092"
+      - "2181:2181"
+    volumes:
+      - "kafka_data:/bitnami"
+    environment:
+      - ADVERTISED_HOST=127.0.0.1
+      - ADVERTISED_PORT=9092
+
+volumes:
+  kafka_data:
+    driver: local

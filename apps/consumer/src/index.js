@@ -1,7 +1,7 @@
-import { Consumer, Offset, KafkaClient } from "kafka-node";
+import { Consumer, KafkaClient } from "kafka-node";
 
 const topic = "convos";
-const client = new KafkaClient({});
+const client = new KafkaClient();
 const topics = [{ topic }];
 const options = { fetchMaxWaitMs: 1000, fetchMaxBytes: 1024 * 1024 };
 
